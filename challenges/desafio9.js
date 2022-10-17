@@ -5,4 +5,4 @@ db.produtos.find({
         quantidade: { $lt: 500 },
       },
     },
-  });
+  }, { _id: false, nome: true });
