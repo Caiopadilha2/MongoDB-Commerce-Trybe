@@ -8,4 +8,4 @@ db.produtos.updateOne(
      ultimaModificacao: {
        $exists: true,
      }
-   });
+   }, { _id: false, nome: true});
