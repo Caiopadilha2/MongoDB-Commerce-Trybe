@@ -1,9 +1,5 @@
-db.produtos.updateMany(
+db.produtos.updateOne(
     { nome: "Big Mac" },
     { $unset: { curtidas: "" } },
   );
-  db.produtos.find({
-    nome: {
-      $nin: ["Big Mac"],
-    }, 
-  }, { _id: false, nome: true, curtidas: true });
+  db.produtos.find({ }, { _id: false, nome: true, curtidas: true });
